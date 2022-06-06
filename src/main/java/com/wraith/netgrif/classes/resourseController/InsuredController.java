@@ -93,7 +93,6 @@ public class InsuredController
                             travelInsurance.setDamageLiability(insurance.isDamageLiability());
                             travelInsurance.setUsed(insurance.isUsed());
 
-                            response.append(travelInsuranceQueryService.createInsurance(travelInsurance)).append(" ").append(travelInsurance.getDateStart()).append("\n");
                         }
                         catch (TravelInsuranceException exception) { response.append(exception.getMessage()).append('\n'); }
                     }
