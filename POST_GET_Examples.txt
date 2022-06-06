@@ -1,0 +1,40 @@
+###
+
+POST http://localhost:8080/insured
+Accept: application/json
+Content-Type: application/json
+
+{
+  "account": {
+    "firstName": "",
+    "lastName": "",
+    "address": "",
+    "identNumber": "",
+    "mail": ""
+  },
+  "travelInsurance": [
+    {
+      "dateEnd": "",
+      "dateStart": ""
+    },
+    {
+      "dateEnd": "",
+      "dateStart": "",
+      "damageLiability": true
+    }
+  ],
+  "propertyInsurance": [
+    {
+      "date": "",
+      "address": "",
+      "type": 1,
+      "price": 310504
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/insured
+
+###
+GET http://localhost:8080/insured/{{inputID}}
