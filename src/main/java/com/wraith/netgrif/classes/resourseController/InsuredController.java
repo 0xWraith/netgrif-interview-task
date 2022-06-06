@@ -140,6 +140,7 @@ public class InsuredController
 
             return new ResponseEntity<>(new FullAccount(account.get(), travelInsurance, propertyInsurances), HttpStatus.OK);
         }
+        catch (NumberFormatException exception) { throw new AccountNotFoundException("Invalid ID"); }
         catch (ResponseStatusException exception) { throw new AccountNotFoundException("Empty"); }
     }
 }
